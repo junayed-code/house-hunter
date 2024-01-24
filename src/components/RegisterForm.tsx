@@ -5,7 +5,7 @@ import Button from "./shared/Button";
 import { useFormik } from "formik";
 import { useFormState } from "react-dom";
 import { signUpSchema as validationSchema } from "@/utils/shemas";
-import submitRegisterForm from "@/actions/submitRegisterForm";
+import createUser from "@/actions/createUser";
 
 const initialValues = {
   name: "",
@@ -16,7 +16,7 @@ const initialValues = {
 };
 
 function RegisterForm() {
-  const [state, formAction] = useFormState<any, FormData>(submitRegisterForm, {
+  const [state, formAction] = useFormState<any, FormData>(createUser, {
     message: null,
   });
 
